@@ -59,14 +59,14 @@ function Page() {
           <p>{valForm?.hatchBatch}</p>
 
           <label>Sold Date:</label>
-          <p>{valForm?.sold}</p>
+          <p>{(valForm?.sold && valForm?.sold.split('T')[0]) || ''}</p>
 
 
           <label>Deceased Date:</label>
-          <p>{valForm?.deceased}</p>
+          <p>{(valForm?.deceased && valForm?.deceased.split('T')[0]) || ''}</p>
 
           <label>HatchDate</label>
-          <p>{valForm?.hatch_date}</p>
+          <p>{(valForm?.hatch_date && valForm?.hatch_date.split('T')[0]) || ''}</p>
 
           <label>Location</label>
           <p>{valForm?.location}</p>
