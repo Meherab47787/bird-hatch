@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 dotenv.config({ path: './.env' });
 
 const corsOptions = {
-    origin: process.env.CORS_ORIGIN, // or specify your allowed origins
+    origin: `${process.env.CORS_ORIGIN}`, // or specify your allowed origins
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
