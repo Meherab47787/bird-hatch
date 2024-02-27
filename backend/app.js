@@ -10,10 +10,10 @@ const bodyParser = require('body-parser');
 dotenv.config({ path: './.env' });
 
 const corsOptions = {
-    origin: '*', // or specify your allowed origins
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    origin: process.env.CORS_ORIGIN,
+    methods: 'GET,DELETE,PATCH,POST,PUT',
     credentials: true,
-    optionsSuccessStatus: 204,
+    allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
   };
 app.use(cors(corsOptions));
 
