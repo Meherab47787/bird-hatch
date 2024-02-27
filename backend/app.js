@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 dotenv.config({ path: './.env' });
 
 const corsOptions = {
-    origin: process.env.CORS_ORIGIN,
+    origin: 'https://bird-hatch-tv4i.vercel.app',
     methods: 'GET,DELETE,PATCH,POST,PUT',
     credentials: true,
     allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
